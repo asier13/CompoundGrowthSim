@@ -30,6 +30,6 @@ This script helps you simulate that future outcome.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/CompoundGrowthSim.git
+   git clone https://github.com/asier13/CompoundGrowthSim.git
    cd CompoundGrowthSim
    python long_term_plan.py

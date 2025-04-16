@@ -17,7 +17,7 @@ while True:
     name = input("Enter the name of the asset: ")
     nominal_return = float(input("Enter the expected annual return (not inflation-adjusted), in %: ")) / 100
     real_return = nominal_return - inflation
-    weekly_contribution = float(input("Enter the weekly investment amount in euros: "))
+    weekly_contribution = float(input("Enter the weekly investment amount in $: "))
 
     assets.append({
         "name": name,
@@ -40,13 +40,13 @@ for asset in assets:
 
     results.append({
         "Asset": asset["name"],
-        "Weekly Investment (€)": round(asset["weekly_contribution"], 2),
+        "Weekly Investment ($)": round(asset["weekly_contribution"], 2),
         "Nominal Return (%)": round(asset["nominal_return"] * 100, 2),
         "Real Return (%)": round(asset["real_return"] * 100, 2),
-        "Total Contribution (€)": round(total_contribution, 2),
+        "Total Contribution ($)": round(total_contribution, 2),
         "Total Return (%)": round(total_return, 2),
         "Years": years,
-        "Future Value (€)": round(future_value, 2)
+        "Future Value ($)": round(future_value, 2)
     })
 
 df_results = pd.DataFrame(results)
